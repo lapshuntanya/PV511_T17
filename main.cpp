@@ -36,7 +36,7 @@ int main() {
 
 #if CREATE_OR_LOAD == 0
     NClients = 3;
-    arr = new Clien[NClients] {
+    arr = new Client[NClients] {
         {"Pupkin Mykola", 123456, 200, {1, 1, 2000}},
         {"Shevchenko Taras", 543216, 5'000, {12, 7, 2021}},
         {"Franko Ivan", 765432, 2'500, {30, 8, 2019}}
@@ -44,9 +44,25 @@ int main() {
 #elif CREATE_OR_LOAD == 1
     //load
 #endif
+    //-----------------------------------------------------
+
+    int menu = 0;
+    do {
+        cout << "0 - exit\n";
+        cout << "1 - show all clients\n";
+        cin >> menu;
+
+        switch (menu) {
+            case 1: printArray(arr, NClients);
+                break;
+        }
+
+    }while (menu!=0);
 
 
-
+    //-----------------------------------------------------
+    saveArray(arr, NClients);
+    delete[] arr;
 
     return 0;
 }
