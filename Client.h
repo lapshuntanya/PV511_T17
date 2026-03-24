@@ -33,6 +33,13 @@ struct Client {
         cout << "Opened date:   " << opened_date.toString("%Y.%m.%d") << endl;
         cout << "---------------------------------------------\n\n";
     }
+
+    void saveToTextFile(FILE* fp) {
+        fprintf(fp, "\n%s", name);
+        fprintf(fp, "\n%ul", number);
+        fprintf(fp, "\n%lf", money);
+        fprintf(fp, "\n%d %d %d", opened_date.year, opened_date.month, opened_date.day);
+    }
 };
 
 
