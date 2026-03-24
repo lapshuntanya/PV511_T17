@@ -1,5 +1,5 @@
 #include "Client.h"
-#define CREATE_OR_LOAD 0 //0-Create, 1-Load
+#define CREATE_OR_LOAD 1 //0-Create, 1-Load
 
 int main() {
 
@@ -42,7 +42,7 @@ int main() {
         {"Franko Ivan", 765432, 2'500, {30, 8, 2019}}
     };
 #elif CREATE_OR_LOAD == 1
-    //load
+    loadArray(arr, NClients);
 #endif
     //-----------------------------------------------------
 
