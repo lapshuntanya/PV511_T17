@@ -42,14 +42,21 @@ struct Client {
     }
 
     void loadFromTextFile(FILE* fp) {
-        fscanf_s(fp, "\n"); //VS
+       // fscanf_s(fp, "\n"); //VS
+        fscanf(fp, "\n"); //Clion, Online
         fgets(name, 100, fp); //"Pupkin Mykola\n"
         int len = strlen(name);
         name[len - 1] = '\0';   //"Pupkin Mykola\0"
 
-        fscanf_s(fp, "%lu", &number);
-        fscanf_s(fp, "%lf", &money);
-        fscanf_s(fp, "%d %d %d", &opened_date.year, &opened_date.month, &opened_date.day);
+        //VS
+        // fscanf_s(fp, "%lu", &number);
+        // fscanf_s(fp, "%lf", &money);
+        // fscanf_s(fp, "%d %d %d", &opened_date.year, &opened_date.month, &opened_date.day);
+
+        //Clion, Online
+        fscanf(fp, "%lu", &number);
+        fscanf(fp, "%lf", &money);
+        fscanf(fp, "%d %d %d", &opened_date.year, &opened_date.month, &opened_date.day);
     }
 };
 
