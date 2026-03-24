@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(PV511_T17 main.cpp
         ArrayTemplate.h
         DateMac.h
-        Client.h)
+        Client.h
+        Client.cpp)
