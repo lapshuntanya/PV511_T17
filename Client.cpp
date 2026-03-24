@@ -41,5 +41,8 @@ void loadArray(Client *&arr, int &size) {
 }
 
 void printArray(Client *arr, int size) {
-
+    for (int i = 0; i < size; i++) {
+        arr[i].printClient();
+        cout << endl;
+    }
 }
