@@ -58,7 +58,12 @@ struct Client {
         fscanf(fp, "%lf", &money);
         fscanf(fp, "%d %d %d", &opened_date.year, &opened_date.month, &opened_date.day);
     }
-};
 
+}; // end struct
+
+// Функції з масивом клієнтів
+void saveArray(Client* arr, int size);
+void loadArray(Client* &arr, int &size);
+void printArray(Client* arr, int size);
 
 #endif //PV511_T17_CLIENT_H
